@@ -1,0 +1,60 @@
+---
+layout: none
+permalink: .well-known/keybase.txt
+---
+==================================================================
+https://keybase.io/alanfleming
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alanfleming.org
+  * I am alanfleming (https://keybase.io/alanfleming) on keybase.
+  * I have a public key ASCRiBxKiBKYWXtb2CFjpuTU3kivj_7_Ft1rluMe50cJDAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010184714db7a1c392b2211503b563cc632b5ea7d03c1300ee16ea995a25183d605a0a",
+      "host": "keybase.io",
+      "kid": "012091881c4a881298597b5bd82163a6e4d4de48af8ffeff16dd6b96e31ee747090c0a",
+      "uid": "9da7293e8d67e17ec859ddd28c1bcc19",
+      "username": "alanfleming"
+    },
+    "merkle_root": {
+      "ctime": 1568279862,
+      "hash": "8e838073a3cae2606aedda4346f750cfec477c74063c86e98fc4f9acb83929af5a769224bebd845a68b3868d86b4c2f0ae33431265208d1ddcf347bc87c3aef1",
+      "hash_meta": "5a5e317ac72a528a120be03ad06175a27aa0898c2f4abbe81392b9d2fcfde89d",
+      "seqno": 6934604
+    },
+    "service": {
+      "entropy": "h3Hu1r0qdBhmpRaDAoiQrCZa",
+      "hostname": "alanfleming.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.1"
+  },
+  "ctime": 1568279864,
+  "expire_in": 504576000,
+  "prev": "4c418dee80c4444f253b97e0095f0aacf36e6719ab13ef58a75876323162854d",
+  "seqno": 38,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkYgcSogSmFl7W9ghY6bk1N5Ir4/+/xbda5bjHudHCQwKp3BheWxvYWTESpcCJsQgTEGN7oDERE8lO5fgCV8KrPNuZxmrE+9Yp1h2MjFihU3EIMCSPg5zoXkUSMLGI0MDYmfqqAqwM390DZR8ezIphPnoAgHCo3NpZ8RAzfmK8Ftqp/YlXzL2U14K0z01Zs2H8QXWI0cpKg1w9anKxpSdBh5UV2727sjzpVeIjn6bh/OIXwVeJqZHj9I8CahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAh9gAVYLL6DzxuHsLK76JdOcI6JOlGgYPX1HGtJ1teZo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alanfleming
+
+==================================================================
