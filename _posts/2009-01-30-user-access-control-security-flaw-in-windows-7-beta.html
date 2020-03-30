@@ -1,0 +1,15 @@
+---
+layout: post
+status: publish
+published: true
+title: User Access Control security flaw in Windows 7 beta
+date: '2009-01-30 20:04:04 +0000'
+date_gmt: '2009-01-30 20:04:04 +0000'
+
+---
+<p><a href="http://www.istartedsomething.com/20090130/uac-security-flaw-windows-7-beta-proof/">Sacrificing security for usability: UAC security flaw in Windows 7 beta</a>:</p>
+<blockquote><p>By default, Windows 7&rsquo;s UAC setting is set to &ldquo;Notify me only when programs try to make changes to my computer&rdquo; and &ldquo;Don&rsquo;t notify me when I make changes to Windows settings&rdquo;. How it distinguishes between a (third party) program and Windows settings is with a security certificate. The applications/applets which manage Windows settings are signed with a special Microsoft Windows 7 certificate. As such, control panel items are signed with this certificate so they don&rsquo;t prompt UAC if you change any system settings.</p>
+<p>The Achilles&rsquo; heel of this system is that changing UAC is also considered a &ldquo;change to Windows settings&rdquo;, coupled with the new default UAC security level, would not prompt you if changed. Even to disable UAC entirely.</p></blockquote>
+<p>Whoops. This one is a bit of a showstopper. I'm very happy with the re-imagined User Access Control in Windows 7 (I believe it's pretty much what it should have been in Vista) but this definitely needs fixed. I agree completely with Long Zheng's proposed solution:</p>
+<blockquote><p>Microsoft can implement without sacrificing any of the benefits the new UAC model provides, and that is to force a UAC prompt in Secure Desktop mode whenever UAC is changed, regardless of its current state. This is not a fool-proof solution (users can still inadvertently click &ldquo;yes&rdquo;) but a simple one.</p></blockquote>
+<p><cite>(Via <a href="http://www.istartedsomething.com">I Started Something</a>.)</cite></p>
