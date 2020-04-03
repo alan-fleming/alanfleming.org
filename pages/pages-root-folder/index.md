@@ -12,11 +12,6 @@ widget1:
   url: 'http://alanfleming.org/about/'
   image: widget-1-302x182.jpg
   text: 'All you really need to know, and more.'
-widget2:
-  title: "My blog"
-  url: 'http://alanfleming.org/blog/'
-  image: widget-1-302x182.jpg
-  text: 'I used to write a blog.'
 #
 # Use the call for action to show a button on the frontpage
 #
