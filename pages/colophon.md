@@ -1,4 +1,5 @@
 ---
+permalink: /colophon/
 layout: page
 title: Colophon
 ---

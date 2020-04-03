@@ -1,4 +1,5 @@
 ---
+permalink: /caveat/
 layout: page
 title: Caveat
 ---

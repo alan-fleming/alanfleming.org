@@ -3,13 +3,13 @@
   side: left
 
 - title: About Alan
-  url: "/about/"
+  url: "about/"
   side: left
 
 - title: "Caveat"
-  url: "/caveat/"
+  url: "caveat/"
   side: right
 
 - title: "Contact"
-  url: "/contact/"
+  url: "contact/"
   side: right
