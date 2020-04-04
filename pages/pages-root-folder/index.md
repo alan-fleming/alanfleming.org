@@ -9,7 +9,7 @@ header:
   image_fullwidth: SF.jpg
 widget1:
   title: "About Alan"
-  url: 'about/'
+  url: '/about/'
   image: widget-1-302x182.jpg
   text: 'All you really need to know, and more.'
 #
