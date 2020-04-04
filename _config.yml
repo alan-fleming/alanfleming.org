@@ -50,9 +50,6 @@ plugins:
     - jekyll-gist
     - jekyll-paginate
 
-# Redirects
-redirects: yes    
-
 
 #       ____              _             __  _
 #      / __ \____ _____ _(_)___  ____ _/ /_(_)___  ____
