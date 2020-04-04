@@ -1,6 +1,8 @@
 ---
 permalink: /search/
 layout: page
+header:
+  image_fullwidth: SF.jpg
 title: "Search"
 sitemap: false
 ---

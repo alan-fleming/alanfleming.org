@@ -1,6 +1,8 @@
 ---
 permalink: /about/
 layout: page
+header:
+  image_fullwidth: SF.jpg
 title: About Alan
 ---
 

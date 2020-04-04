@@ -1,6 +1,8 @@
 ---
 permalink: /contact/
 layout: page
+header:
+  image_fullwidth: SF.jpg
 title: Contact
 ---
 
