@@ -43,3 +43,6 @@ apple-icon-120x120:              'apple-icon-120x120.png'
 apple-icon-precomposed:          'apple-icon-180x180.png'
 msapplication_tileimage:         'android-icon-144x144.png'               
 msapplication_tilecolor:         '#fabb00'
+
+# Google Analytics ID
+google_analytics:                 'G-LLYXP5PHJ7'
