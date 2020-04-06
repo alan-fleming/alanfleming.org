@@ -4,8 +4,8 @@ highlighter:      rouge
 
 # Setup
 title:            'Insert Witticism here'
-tagline:          'Alan Flemings Web Pages '
-description:      'Something for now'
+tagline:          "Alan Fleming\u02BCs Web Pages"
+description:      "Alan Fleming\u02BCs Web Pages"
 url:              https://alanfleming.org
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
