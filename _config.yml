@@ -33,3 +33,12 @@ sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
+# Favico settings
+favicon-32x32:                   'favicon-32x32.png'
+android-icon-192x192:            'android-icon-192x192.png'
+apple-icon-180x180:              'apple-icon-180x180.png'
+apple-icon-152x152:              'apple-icon-152x152.png'
+apple-icon-120x120:              'apple-icon-120x120.png'
+apple-icon-precomposed:          'apple-icon-180x180.png'
+msapplication_tileimage:         'android-icon-144x144.png'               
+msapplication_tilecolor:         '#fabb00'
