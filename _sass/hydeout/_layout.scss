@@ -36,6 +36,28 @@ body {
   flex: 0 0 auto;
   padding: $section-spacing;
 
+  .sidebar-author-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    overflow: hidden;
+    background-color: #333030;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+  }
+
   .site-title {
     font-family: 'Abril Fatface', serif;
     font-size: $large-font-size;
