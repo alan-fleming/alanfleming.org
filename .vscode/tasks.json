@@ -6,12 +6,17 @@
         {
             "label": "jekyll-serve",
             "type": "shell",
-            "command": "bundle exec jekyll serve --config _config.yml,_config_dev.yml"
+            "command": "jekyll serve"
         }
         {
-            "label": "Build site",
+            "label": "Build site to dev",
             "type": "shell",
-            "command": "bundle exec jekyll build"
+            "command": "JEKYLL_ENV=dev jekyll build && rsync -a --delete -e ssh /Users/af/code/alanfleming.org/_site/ admin@diamond.etrigan.org:/volume1/web/dev_alanfleming.org/"
+        }
+        {
+            "label": "Build site to production",
+            "type": "shell",
+            "command": "jekyll build && rsync -a --delete -e ssh /Users/af/code/alanfleming.org/_site/ admin@diamond.etrigan.org:/volume1/web/web_alanfleming.org/"
         }
     ]
 }
