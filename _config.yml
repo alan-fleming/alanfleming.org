@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            'Insert Witticism here'
+title:            '(Insert Witticism here)'
 tagline:          "Alan Fleming\u02BCs Web Pages"
 description:      "Alan Fleming\u02BCs Web Pages"
 url:              https://alanfleming.org

@@ -59,9 +59,10 @@ body {
   }
 
   .site-title {
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Lobster', sans-serif;
     font-size: $large-font-size;
-    font-weight: normal;
+    font-style: regular;
+    font-weight: 400;
     margin-bottom: $heading-spacing;
     margin-top: 0;
   }
