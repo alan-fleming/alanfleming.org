@@ -1,8 +1,7 @@
 ---
 permalink: /colophon/
 layout: page
-header:
-  image_fullwidth: SF.jpg
+sidebar_link: true
 title: Colophon
 ---
 

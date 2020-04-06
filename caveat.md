@@ -1,8 +1,7 @@
 ---
 permalink: /caveat/
 layout: page
-header:
-  image_fullwidth: SF.jpg
+sidebar_link: true
 title: Caveat
 ---
 
