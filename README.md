@@ -1,66 +1,168 @@
-## You like and use this theme? Then support me. Just [paypal.me/PhlowMedia](https://www.paypal.me/PhlowMedia) :)
+# Hydeout
 
-# Newsletter: Stay in Touch for Future Updates
+Hydeout updates the original [Hyde](https://github.com/poole/hyde)
+theme for [Jekyll](http://jekyllrb.com) 3.x and 4.x and adds new functionality.
 
-If you are a webdesigner interested in Jekyll, the static website generator, this little newsletter is for you. I share tutorials, clever code snippets and information about my own Jekyll Themes called [*Feeling Responsive*][7] and [*Simplicity*][8]. Please don't expect weekly emails :)
+![Desktop](/_screenshots/1.png?raw=true)
+<img alt="Mobile home page" src="/_screenshots/2.png?raw=true" width="300px" />
+<img alt="Mobile post page" src="/_screenshots/3.png?raw=true" width="300px" />
 
-[![Subscribe to Jekyll Newsletter](https://phlow.github.io/static/tinyletter_subscribe_button.png)](https://tinyletter.com/feeling-responsive)
+### Usage
 
+Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem.
+Add `gem "jekyll-theme-hydeout", "~> 3.4"` to your Gemfile and run
+`bundle install`.
 
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-1280x720.jpg)](https://www.youtube.com/embed/3b5zCFSmVvU)
+If you're installing on Github pages, you may also have to add
+`remote_theme: fongandrew/hydeout` to your `_config.yml`. [See the Github
+instructions for more details.](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
 
-## A Responsive Jekyll Theme: *Feeling Responsive*
+Hydeout uses pagination, so if you have an `index.md`, you'll need to swap
+it with an `index.html` that uses the `index` layout:
 
-Do you want to get to know *Feeling Responsive*? Than check it out first and have a look on its home at  <http://phlow.github.io/feeling-responsive/>.
+```
+---
+layout: index
+title: Home
+---
+```
 
-To get to know *Feeling Responsive* check out all the features explained in the [documentation][1].
+You'll also need to add a setting to `_config.yml` telling Jekyll how many posts
+to include per page (e.g. `paginate: 5`).
 
-And what license is *Feeling Responsive* released under? [This one][2].
+### Keep It Simple
 
+In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).
 
+Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.
 
-## Why use this theme?
+### Customization
 
-Feeling Responsive is heavily customizable.
+Hydeout replaces Hyde's class-based theming with the use
+of the following SASS variables:
 
-1. Language-Support :)
-2. Optimized for speed and it's responsive.
-3. Built on Foundation Framework.
-4. Six different Headers.
-5. Customizable navigation, footer,...
+```scss
+$sidebar-bg-color: #202020 !default;
+$sidebar-fg-color: white !default;
+$sidebar-sticky: true !default;
+$layout-reverse: false !default;
+$link-color: #268bd2 !default;
+```
 
-**[More ›][3]**
+To override these variables, create your own `assets/css/main.scss` file.
+Define your own variables, then import in Hydeout's SCSS, like so:
 
+```scss
+---
+# Jekyll needs front matter for SCSS files
+---
 
+$sidebar-bg-color: #ac4142;
+$link-color: #ac4142;
+$sidebar-sticky: false;
+@import "hydeout";
+```
 
-## Changelog
+See the [_variables](_sass/hydeout/_variables.scss) file for other variables
+you can override.
 
-*Feeling Responsive* is in active development. Thank you to everyone who contributed, especially [Róbert Papp][5], [Alexandra von Criegern](https://github.com/plutonik-a) and [Juan Jose Amor Iglesias](https://github.com/jjamor).
+You can see the full set of partials you can replace in the
+[`_includes`](_includes) folder, but there are a few worth noting:
 
-**[Read Changelog ›][6]**
+* `_includes/copyright.html` - Insert your own copyright here.
 
+* `_includes/custom-head.html` - Insert custom head tags (e.g. to load your
+  own stylesheets)
 
+* `_includes/custom-foot.html` - Insert custom elements at the end of the
+  body (e.g. for custom JS)
 
-## Video Tutorial
+* `_includes/custom-nav-links.html` - Additional nav links to insert at the
+  end of the list of links in the sidebar.
 
-Click the image to [watch the YouTube-Video-Tutorial][4].
+  Pro-tip: The `nav`s in the sidebar are flexboxes. Use the `order` property
+  to order your links.
 
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-tutorial-frontpage.jpg)](https://www.youtube.com/watch?v=rLS-BEvlEyY)
+* `_includes/custom-icon-links.html`- Additional icon links to insert at the
+  end of the icon links at the bottom of the sidebar. You can use the `order`
+  property to re-order.
 
+* `_includes/favicons.html` - Replace references to `favicon.ico` and
+  `favicon.png` with your own favicons references.
 
+* `_includes/font-includes.html` - The Abril Fatface font used for the site
+  title is loaded here. If you're overriding that font in the CSS, be sure
+  to also remove the font load reference here.
 
+### New Features
 
+* Hydeout adds a new tags page (accessible in the sidebar). Just create a
+  new page with the tags layout:
 
+  ```
+  ---
+  layout: tags
+  title: Tags
+  ---
+  ```
 
+* Hydeout adds a new "category" layout for dedicated category pages.
+  Category pages are automatically added to the sidebar. All other pages
+  must have `sidebar_link: true` in their front matter to show up in
+  the sidebar. To create a category page, use the `category` layout"
 
+  ```
+  ---
+  layout: category
+  title: My Category
+  ---
 
- [1]: http://phlow.github.io/feeling-responsive/documentation/
- [2]: https://github.com/Phlow/feeling-responsive/blob/gh-pages/LICENSE
- [3]: http://phlow.github.io/feeling-responsive/info/
- [4]: https://www.youtube.com/watch?v=rLS-BEvlEyY
- [5]: https://github.com/TWiStErRob
- [6]: https://phlow.github.io/feeling-responsive/changelog/
- [7]: http://phlow.github.io/feeling-responsive/
- [8]: http://phlow.github.io/simplicity/
- [9]: #
- [10]: #
+  Description of "My Category"
+  ```
+
+* You can control how pages are sorted by using the `sidebar_sort_order`
+  parameter in the front matter. This works for both category and non-category
+  pages, although non-category pages will always come first. Take a look at
+  [`_includes/sidebar-nav-links.html`](./_includes/sidebar-nav-links.html) if
+  you want to customize this behavior.
+
+  ```
+  ---
+  layout: page
+  title: My page
+  sidebar_sort_order: 123
+  ---
+
+  Some content.
+  ```
+
+* A simple redirect-to-Google search is available. Just create a page with
+  the `search` layout.
+
+  ```
+  ---
+  layout: search
+  title: Google Search
+  ---
+  ```
+
+* Disqus integration is ready out of the box. Just add the following to
+  your config file:
+
+  ```yaml
+  disqus:
+    shortname: my-disqus-shortname
+  ```
+
+  If you don't want Disqus or want to use something else, override
+  `comments.html`.
+
+* For Google Analytics support, define a `google_analytics` variable with
+  your property ID in your config file.
+
+There's also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!
