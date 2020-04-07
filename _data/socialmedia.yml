@@ -1,7 +1,7 @@
-- name: GitHub
-  url: https://github.com/alan-fleming
-  class: github
-  title: "My github profile"
+- name: Mail
+  url: mailto://af@alanfleming.org?subject=Website
+  class: mail
+  title: "Email me"
 
 #- name: YouTube
 #  url: http://www.youtube.com/PhlowMedia
@@ -33,11 +33,6 @@
 #   class: icon-soundcloud
 #   title: ""
 
-- name: Instagram
-  url: https://instagram.com/alanfleming
-  class: instagram
-  title: "My photos on Instagram"
-
 # - name: Pinterest
 #   url: http://www.pinterest.com/
 #   class: icon-pinterest
@@ -52,6 +47,16 @@
   url: https://linkedin.com/alanfleming
   class: linkedin
   title: "My profile on Linkedin"
+
+- name: Instagram
+  url: https://instagram.com/alanfleming
+  class: instagram
+  title: "My photos on Instagram"
+
+- name: GitHub
+  url: https://github.com/alan-fleming
+  class: github
+  title: "My github profile"
 
 - name: Keybase
   url: https://keybase.io/alanfleming
