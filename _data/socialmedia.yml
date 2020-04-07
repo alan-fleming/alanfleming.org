@@ -1,5 +1,5 @@
 - name: Mail
-  url: mailto://af@alanfleming.org?subject=Website
+  url: mailto:af@alanfleming.org?subject=Website
   class: mail
   title: "Email me"
 
