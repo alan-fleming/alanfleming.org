@@ -1,1 +1,7 @@
 <!-- Optional additional links to insert for icons links -->
+
+    {% for social_item in site.data.socialmedia %}
+        <a href="{{ social_item.url }}" class="icon" target="_blank" title="{{ social_item.title }}">{% include svg/{{ social_item.class }}.svg %}</a>
+     {% endfor %}
+
+

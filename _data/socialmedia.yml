@@ -1,0 +1,59 @@
+- name: GitHub
+  url: https://github.com/alan-fleming
+  class: github
+  title: "My github profile"
+
+#- name: YouTube
+#  url: http://www.youtube.com/PhlowMedia
+#  class: icon-youtube
+#  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
+
+- name: Twitter
+  url: https://twitter.com/alanfleming
+  class: twitter
+  title: "My Twitter account"
+
+#- name: Mixcloud
+#  url: http://www.mixcloud.com/phlow/
+#  class: icon-cloud
+#  title: "Mixe, was sonst?"
+
+#- name: Phlow YouTube Google+
+#  url: https://plus.google.com/u/0/+Phlow
+#  class: icon-googleplus
+#  title: "YouTube Google+"
+
+# - name: Facebook
+#   url: http://www.facebook.com/
+#   class: icon-facebook
+#   title: ""
+
+# - name: Soundcloud
+#   url: http://soundcloud.com/
+#   class: icon-soundcloud
+#   title: ""
+
+- name: Instagram
+  url: https://instagram.com/alanfleming
+  class: instagram
+  title: "My photos on Instagram"
+
+# - name: Pinterest
+#   url: http://www.pinterest.com/
+#   class: icon-pinterest
+#   title: ""
+
+# - name: Xing
+#   url: https://www.xing.com/profile/
+#   class: icon-xing
+#   title: Xing Profil
+
+- name: Linkedin
+  url: https://linkedin.com/alanfleming
+  class: linkedin
+  title: "My profile on Linkedin"
+
+- name: Keybase
+  url: https://keybase.io/alanfleming
+  class: network
+  title: "My identity on Keybase"
