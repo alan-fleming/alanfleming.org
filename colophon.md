@@ -5,6 +5,13 @@ sidebar_link: true
 title: Colophon
 ---
 
-### The Lagrange Theme
+This is a static site, built using [Jekyll](https://jekyllrb.com). 
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
+### Theme and styling
+The theme in use is [Hydeout](https://fongandrew.github.io/hydeout/), heavily customised by me with inspiration and some code from the [Feeling Responsive](https://phlow.github.io/feeling-responsive/) theme.
+
+Both themes are completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/).
+
+Icons are from [Entypo](http://entypo.com) and are licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The font used for the site's title is [Caveat](https://fonts.google.com/specimen/Caveat), designed by [Pablo Impallari](https://github.com/impallari/)
