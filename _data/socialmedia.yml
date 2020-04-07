@@ -44,12 +44,12 @@
 #   title: Xing Profil
 
 - name: Linkedin
-  url: https://linkedin.com/alanfleming
+  url: https://linkedin.com/in/alanfleming
   class: linkedin
   title: "My profile on Linkedin"
 
 - name: Instagram
-  url: https://instagram.com/alanfleming
+  url: https://instagram.com/alanfleminguk
   class: instagram
   title: "My photos on Instagram"
 
