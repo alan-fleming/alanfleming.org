@@ -56,3 +56,6 @@ bing_webmastertools_id:    '18690FCB9A81CEBACC28FB38C64D1553'
 # alexa_verify_id:           ''
 socialmedia:
   twitter: alanfleming
+
+# Exclusions
+exclude: [LICENSE.md, README.md]  
