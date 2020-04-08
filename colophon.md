@@ -8,7 +8,7 @@ title: Colophon
 This is a static site, built using [Jekyll](https://jekyllrb.com), hosted on [Github](https://github.com) and automatically deployed using [Travis CI](https://travis-ci.org/)
 
 ### Theme and styling
-The theme in use is [Hydeout](https://fongandrew.github.io/hydeout/), heavily customised by me with inspiration and some code from the [Feeling Responsive](https://phlow.github.io/feeling-responsive/) theme.
+The theme in use is [Hydeout](https://github.com/fongandrew/hydeout), heavily customised by me with inspiration and some code from the [Feeling Responsive](https://github.com/Phlow/feeling-responsive) theme.
 
 Both themes are completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/).
 
