@@ -1,6 +1,25 @@
 language: ruby
 rvm:
- - 2.6
+- 2.6
 script:
- - bundle exec jekyll build
- - bundle exec htmlproofer ./_site --disable-external --empty-alt-ignore
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external --empty-alt-ignore
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- chmod 600 /tmp/deploy_rsa
+- eval "$(ssh-agent -s)"
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: sitekA5bCx60405PyDZCLHfo0e3Q7vrcfs6o3domc66Rkm707EQfLVEmdteMRTFwesJ++Y2Q3Gi+H3fBaAGGY0arUoiE1udYWjD9Wx7buDwr6pH/rBlow5Fbh4DqIRaHIuI5JU3fyMlnI2lfsJ+6FyVbpD6ulDgrYHhcFDXnUy8fLk3I28m1P7SNElty/fLDUu7Qr0eydF2RqZ+yHPAKPJ8UXhluX8LmlO3dmbDlWzMwpy9ROZ2Sw051VFMcMv0IHHdewLye51fY3EB6mLB/MigXQbUULnEM13K+zTcs5sClANH09m/kJvDtiT7KkTlPQs+0aU5XpsoF97+GJ7gjiNp+Rob4qJcVb1Wl7YTXNC9DDFeBiuxHs8Qk6QBdsZjCbfldlm5EW/jHdDEc2FlSfQL2aLoa6ateSO5kJSfm0ZfcQmKRLR5aO0h0TpUBh1BTt69t7jhbJ1sLuXeQn3uPJFZ+v1TxihjI1SwLKzW7HzrFHjfmu1Kg3DD8Emnfl/+LeWBnI31T+UvCQdVDwULrNU+9Y46OXthoUzNl+jwB/j7rKBXGEEO+pjF24Am9Agam5T09mWnCnuYqRpbNZrcVDTSoTkq64w1rYyywl81p0MAp96fUugDX0EnxaUQVCqCQ4cerFFFrN6kHfCttm8TsetGm5wGNs4uGCP6PRL4/e9w=
+  - secure: vIIQi424Q6YQUDc3v8WrRI0PtBuTkSK6pwy5i7HAg4HEfSEowDoGEHb/3Edk0BjucM+VaAEWkCBISAwkq/rok+YVvov0IrAHpWPqT+urwuZQaKjuS/SdJveodBaoc/Tl05FE+PGAKGc51EKS+MphyX2qeV8/5d7JLin/mxB1kLrXUtl1dspVdlIjgW4lOZYdW+OvnSIVUFhFXYW3KtpCSRKC7xU+MXf9G1935CpuPTwdpf5ier/BFGJR7lghkB7WQ2O2JJcnWrq1eGA9lnKNSiA+np3uXqmrq4jZzFxjR/T3u3FluYK8DzYbbDZE2BFhjSpDr3DxiXLLEWYa9qG9rT/kCDxV1bRFx2SHWcAMoeEvH7G6VXDd8u+q8uMa0u/oSiNJrLVGfVyRVRpUkyfbB8m7bW8W0NUfbzxDWp0hDIgiHTN4RIaegeqIT24fHEBYCgvYFmaK5sAyblKvPRp/+qhS733PuYaNBmCpXPqgljNCa9d3tKiql2iQzJBzI7DtHDZETUxfHA+6AaHaviFB8jF8RouWRFc7lgkuqlZ5QlJ5h4VuWLVP0R3+nBHwmBcPL89FvgKFEoclBbXnP/O6Z3i3Mgojd1OP5G9VNHydlrKYGKF43U97SoYf43AbjIgCzbvCOUsL482H4Y1JfhJXHv5sSjss2QalnRPy617vIQs=
+  - secure: JglWVXmO+REua7xCvgzyhSQIIMquOK3gsRKyL/I0nf4RPIdGFLbsmc0kqumhQFxpbPCFKd7IgN5GLficAzJcE9Ak1kkH/spEYD/PLqQf+dVc46Wo9PS562cM1LdAvrynMExRwID3J8nnZ42UH8PsUtm+iffq6xqAzv14XFW0kbdfeAgxuA/d+I3jALYKVE6dNYWF3QNlXi23jNFMLrRzs2NTfvt7mG2a/TER7b9uIL+IwV57Wv9zSfjHnNFha+t1aI2J2h5eAhgJhjuwZNIRRRyAsbJopJUzYQ05jTtVdjEnpx6LayfphNJHJQFnPAN5/Xj1Aftx2+YQzB1R0mHrsUSMaBexJGEiyjrWMtGU76E3hBGlZcvomC+haygqYbAEvL2aR4/tONODywjl+c3z0B+400/KbBcrN91Zuh9Uh2pnjlVteCuQfTtS7EzVYElbVz5x3hMFB/8sIPxnb1U6KZ9IqxNceYZyzdrvh7ViX0raw4ck9MI1MBkmxFYhU33Qt/4bNTednjUkoornoUdoXAVSMF1PWbQz1OFt87jHT+EvVgr5xedJ9Gk53XqaWZTDR+8cBPWrVqz0R6Z4Tb/ojuFElzmBR7VEUnAlAz2H0skK3Z8caY8UcXcjUkVxIC0P0OzsjVUcw91tOHn4F7SP1XA6uiBUDlcxPWMzQQl1laM=
+  - secure: xYEMmnDQfzcne+qK7ihwGrPZJuSoH6LCctvsr+vYxD4DhlBaLP0RRjCYbMBoU1xdeBbmtTH8u3BxNvx4U7p9w9v30XEdcDqHg+cH0KvkMY2Wa1rintWcf45ytdncS1bPOfRkMwBa4IU/X2D4Wd+OvDumfNwmQ04ye/NbtHc/gRE36/HMJ+pbbeVs5YC2ccEiiC7uRkk0A3domMz0UuKUaudQV6dXsUCALfsCwTCgjwo457mA2gfBFzvN2Ut9sN1Dxg6xmDDznKhuH+2MK1ujO20eG4iST9g+okGgLiY49Orbr30BXpQiM8eGz2njjHg1rTVCm12of0rayEqKUA/W5Zewcz5CfFaS/fL+QgoNToQ4NxhhsOHSkXHTpRcLBAdLnrj48RK5l52kQiR3McLn7sP7x5XRQqgQxAH1IvB4Bex4PDL1p1YxoZeYnCa0BZbStocWb+gsGDZFnIZOnMr1aTnOqSHuv8XvjiXcu4BHAgeyaNNvNmO96WF0UYW9eP4J3r2PNhdYFK6/YurcrXqTy6z/lSX4gDipON1qHG0AbF/GwVkTm4pMgKjroDJxoouKXxN0JOWanBMiygV7zdc1/SQNaDTDhUK7tDjyHSvoo8Idxi9lr2H8573pfOlLEtb0wmJ9HizUXBM80uDhL9iKegW3rCjm9R1nF8Cib0U2gF4=
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet -e 'ssh -p $DEPLOY_PORT' _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY --delete-after
+  on:
+    branch: master

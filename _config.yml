@@ -58,4 +58,4 @@ socialmedia:
   twitter: alanfleming
 
 # Exclusions
-exclude: [vendor, Gemfile, Gemfile.lock, LICENSE.md, README.md]  
+exclude: [vendor, Gemfile, Gemfile.lock, LICENSE.md, README.md, deploy_rsa.enc]  
