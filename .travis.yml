@@ -3,7 +3,7 @@ cache: bundler
 rvm:
 - 2.6
 script:
-- bundle exec jekyll build
+- JEKYLL_ENV=production bundle exec jekyll build
 - bundle exec htmlproofer ./_site --disable-external --empty-alt-ignore
 branches:
   only:
