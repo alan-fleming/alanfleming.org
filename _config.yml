@@ -25,14 +25,14 @@ defaults:
       path: '' 				# an empty string here means all files in the project
       type: 'pages'
     values:
-      show_comments: false
+      comments: false
       author: alan     # Default author for pages
   -
     scope:
       path: ''
       type: 'posts'
     values:
-      show_comments: false
+      comments: false
       show_meta: true
       author: alan     # Default author for posts
 
