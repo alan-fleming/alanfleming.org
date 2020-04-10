@@ -1,7 +1,7 @@
 <div id="sidebar">
   <header>
     <div class="sidebar-author-image">
-      <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author.img %}{{site.author.img}}{% endif %}" alt="{{site.author.name}}"></a>
+      <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.sidebar.img %}{{site.sidebar.img}}{% endif %}" alt="{{site.sidebar.alttext}}"></a>
       </div>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ "/" | relative_url }}">

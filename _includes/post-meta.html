@@ -25,5 +25,12 @@
         {{ category }}
       {% endif %}
     {% endfor %}
+    
+    <!-- Look the author details up from the site config. -->
+    {% assign author = site.data.authors[page.author] %}
+    <!-- Output author details if some exist. -->
+    {% if author %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span>
+    {% endif %}
   </span>
 </div>

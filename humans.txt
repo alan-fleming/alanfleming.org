@@ -14,16 +14,23 @@ Twitter: {{ author.twitter }}{% endif %}
 
 /* THANKS */
 
+Name: Andrew Fong
+Role: Creator of the Hydeout Theme
+Twitter: @fongandrewc
+
 Name: Moritz »mo.« Sauer
-Role: Creator of the Theme
+Role: Creator of the Feeling-Responsive Theme
 Site: http://mo.phlow.de/
 Twitter: @phlow
-Theme: http://phlow.github.io/feeling-responsive/
+
+Name: Javier Martinez
+Role: Writer of instructions for Travis deployment
+Site: https://flamingalah.net/
 
 
 /* SITE */
 
 Last Updated: {{ site.time | date:"%Y/%m/%d" }}
 Standards: HTML5, CSS3
-Software: Sublime Text, Chrome, Jekyll, Git, Imageoptim, JPEGMini, Gulp.js, Sass
-Components: Foundation Framework, Modernizr, jQuery, Backstretch.js, Reveal
+Software: Jekyll, Git, Sass, Travis
+

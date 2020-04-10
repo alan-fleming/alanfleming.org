@@ -14,11 +14,30 @@ baseurl:          ''
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
-author:
-  name:           'Alan Fleming'
-  url:            https://twitter.com/alanfleming
+sidebar:
+  alttext:           'Alan Fleming'
   img:            alanfleming.jpeg
 
+# Defaults:  
+defaults:
+  -
+    scope:
+      path: '' 				# an empty string here means all files in the project
+      type: 'pages'
+    values:
+      show_comments: false
+      author: alan     # Default author for pages
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      show_comments: false
+      show_meta: true
+      author: alan     # Default author for posts
+
+
+# Pagination and Plugins
 paginate:         5
 paginate_path:    '/blog/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
