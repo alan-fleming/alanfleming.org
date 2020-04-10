@@ -30,7 +30,16 @@
     {% assign author = site.data.authors[page.author] %}
     <!-- Output author details if some exist. -->
     {% if author %}
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span>
+      <p itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></p>
     {% endif %}
   </span>
+  {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% assign post_year = post_year | plus: 0 %}
+  {% capture this_year %}{{ "now" | date: "%Y" }}{% endcapture %}
+  {% assign this_year = this_year | plus: 0 %}
+  {% capture post_age %}{{this_year | minus: post_year }}{% endcapture %}
+  {% assign post_age = post_age | plus: 0 %}
+  {% if post_age > 3 %}
+    <p class="warning">Warning: this post is {{ post_age }} years old and the content may no longer be accurate.</p>
+  {% endif %}  
 </div>

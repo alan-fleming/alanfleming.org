@@ -9,3 +9,11 @@
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
+.warning {
+  background-color: $yellow;
+  border: 2px solid $gray-4;
+  background-image: linear-gradient(to bottom, lighten($yellow, 7%), darken($yellow, 7%));
+  padding: 2% 2% 2%;
+  color: #717171;
+}
