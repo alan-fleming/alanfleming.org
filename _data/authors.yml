@@ -7,7 +7,7 @@
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
 alan: # replace this with your info
   name: "Alan Fleming"
-  siterole: "webmaster, developer, copywriter, designer"
+  siteroles: "webmaster, developer, copywriter"
   uri: https://alanfleming.org
   email:
   twitter: "@alanfleming"

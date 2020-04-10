@@ -6,10 +6,10 @@ permalink: /humans.txt
 ---
 /* TEAM */
 {% for author_entry in site.data.authors %}{% assign author = author_entry[1] %}
-Name: {% if author.name %}{{ author.name }}{% else %}{{ site.author }}{% endif %}{% if author.siteroles %}
-Role: {{ author.siteroles }}{% endif %}{% if author.uri %}
-Site: {{ author.uri }}{% endif %}{% if author.twitter %}
-Twitter: {{ author.twitter }}{% endif %}
+Name: {% if author.name %}{{ author.name }}{% else %}{{ site.author }}{% endif %}
+Role: {% if author.siteroles %}{{ author.siteroles }}{% endif %}
+Site: {% if author.uri %}{{ author.uri }}{% endif %}
+Twitter: {% if author.twitter %}{{ author.twitter }}{% endif %}
 {% endfor %}
 
 /* THANKS */
