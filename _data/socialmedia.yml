@@ -3,45 +3,10 @@
   class: mail
   title: "Email me"
 
-#- name: YouTube
-#  url: http://www.youtube.com/PhlowMedia
-#  class: icon-youtube
-#  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
-
 - name: Twitter
   url: https://twitter.com/alanfleming
   class: twitter
   title: "My Twitter account"
-
-#- name: Mixcloud
-#  url: http://www.mixcloud.com/phlow/
-#  class: icon-cloud
-#  title: "Mixe, was sonst?"
-
-#- name: Phlow YouTube Google+
-#  url: https://plus.google.com/u/0/+Phlow
-#  class: icon-googleplus
-#  title: "YouTube Google+"
-
-# - name: Facebook
-#   url: http://www.facebook.com/
-#   class: icon-facebook
-#   title: ""
-
-# - name: Soundcloud
-#   url: http://soundcloud.com/
-#   class: icon-soundcloud
-#   title: ""
-
-# - name: Pinterest
-#   url: http://www.pinterest.com/
-#   class: icon-pinterest
-#   title: ""
-
-# - name: Xing
-#   url: https://www.xing.com/profile/
-#   class: icon-xing
-#   title: Xing Profil
 
 - name: Linkedin
   url: https://linkedin.com/in/alanfleming
@@ -52,6 +17,11 @@
   url: https://instagram.com/alanfleminguk
   class: instagram
   title: "My photos on Instagram"
+
+- name: Flickr
+  url: https://flickr.com/alanfleming
+  class: flickr
+  title: "My photos on Instagram"  
 
 - name: GitHub
   url: https://github.com/alan-fleming
