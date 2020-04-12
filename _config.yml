@@ -34,6 +34,7 @@ defaults:
     values:
       comments: false
       show_meta: true
+      autowarn: true   # Whether a warning banner should be applied after 3 years
       author: alan     # Default author for posts
 
 
@@ -77,4 +78,7 @@ socialmedia:
   twitter: alanfleming
 
 # Exclusions
-exclude: [vendor, Gemfile, Gemfile.lock, LICENSE.md, README.md, deploy_rsa.enc]  
+exclude: [vendor, Gemfile, Gemfile.lock, LICENSE.md, README.md, deploy_rsa.enc] 
+
+# Age before warning banner automatically applied (in round years)
+warn_age: 3

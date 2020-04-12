@@ -39,7 +39,7 @@
   {% assign this_year = this_year | plus: 0 %}
   {% capture post_age %}{{this_year | minus: post_year }}{% endcapture %}
   {% assign post_age = post_age | plus: 0 %}
-  {% if post_age > 3 %}
-    <p class="warning">Warning: this post is {{ post_age }} years old and the content may no longer be accurate.</p>
-  {% endif %}  
+  {% if post_age > site.warn_age and post.autowarn == true %}
+  <p class="warning">Warning: this post is {{ post_age }} years old and the content may no longer be accurate.</p>
+    {% endif %}  
 </div>

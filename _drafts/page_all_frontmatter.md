@@ -18,6 +18,7 @@ tags:
 sidebar_link: true
 comments: true
 show_meta: false
+autowarn: true
 meta_title:             # SEO: Overwrites title in <head> if needed
 meta_description:
 permalink:
