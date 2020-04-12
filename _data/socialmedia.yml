@@ -21,12 +21,12 @@
 - name: Flickr
   url: https://flickr.com/alanfleming
   class: flickr
-  title: "My photos on Instagram"  
+  title: "My photos on Flickr"  
 
 - name: GitHub
   url: https://github.com/alan-fleming
   class: github
-  title: "My github profile"
+  title: "My Github profile"
 
 - name: Keybase
   url: https://keybase.io/alanfleming
