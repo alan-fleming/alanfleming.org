@@ -26,9 +26,11 @@
       {% endif %}
     {% endfor %}
     
-    <!-- Look the author details up from the site config. -->
+    {% comment %}
+     Look the author details up from the site config.
+    {% endcomment %}
     {% assign author = site.data.authors[page.author] %}
-    <!-- Output author details if some exist. -->
+    {% comment %} Output author details if some exist. {% endcomment %}
     {% if author %}
       <p itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></p>
     {% endif %}
@@ -40,6 +42,9 @@
   {% capture post_age %}{{this_year | minus: post_year }}{% endcapture %}
   {% assign post_age = post_age | plus: 0 %}
   {% if post_age > site.warn_age and post.autowarn == true %}
-  <p class="warning">Warning: this post is {{ post_age }} years old and the content may no longer be accurate.</p>
-    {% endif %}  
+  {% include svg/sym-warning.svg %}
+  <div class="warning">
+    <svg class="icon-warning"><use href="#icon-warning" ></use></svg>Warning: this post is {{ post_age }} years old and the content may no longer be accurate.
+  </div>
+  {% endif %}  
 </div>

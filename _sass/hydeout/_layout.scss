@@ -163,11 +163,9 @@ body {
   body {
     flex-direction: row;
     min-height: 100vh;
-    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
 
     > * {
-      -webkit-overflow-scrolling: touch;
       overflow-y: auto;
     }
   }
