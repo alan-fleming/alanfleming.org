@@ -26,6 +26,7 @@ defaults:
       type: 'pages'
     values:
       comments: false
+      autowarn: true
       author: alan     # Default author for pages
   -
     scope:

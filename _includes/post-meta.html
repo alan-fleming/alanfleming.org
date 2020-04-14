@@ -36,12 +36,18 @@
     {% endif %}
   </span>
   {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture page_year %}{{ page.date | date: "%Y" }}{% endcapture %}
   {% assign post_year = post_year | plus: 0 %}
+  {% assign page_year = page_year | plus: 0 %}
   {% capture this_year %}{{ "now" | date: "%Y" }}{% endcapture %}
   {% assign this_year = this_year | plus: 0 %}
-  {% capture post_age %}{{this_year | minus: post_year }}{% endcapture %}
+  {% if post_year > 0 %}
+    {% capture post_age %}{{this_year | minus: post_year }}{% endcapture %}
+    {% else %}
+    {% capture post_age %}{{this_year | minus: page_year }}{% endcapture %}
+  {% endif %}
   {% assign post_age = post_age | plus: 0 %}
-  {% if post_age > site.warn_age and post.autowarn == true %}
+  {% if post_age > site.warn_age and post.autowarn == true or page.autowarn == true %}
   {% include svg/sym-warning.svg %}
   <div class="warning">
     <svg class="icon-warning"><use href="#icon-warning" ></use></svg>Warning: this post is {{ post_age }} years old and the content may no longer be accurate.
