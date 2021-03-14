@@ -68,7 +68,10 @@ msapplication_tileimage:         'android-icon-144x144.png'
 msapplication_tilecolor:         '#fabb00'
 
 # Google Analytics ID
-google_analytics:                 'UA-162227289-1'
+# google_analytics:                 'UA-162227289-1'
+
+# Cloudflare Analytics ID
+cloudflare_analytics:             'a04ca528794243218abde15ba5f8c060'
 
 # SEO
 google_site_verification:  'i9c1V3OTcxZIP73j99BqwFJqQfqb8aUPZ78kQHWKs54'
