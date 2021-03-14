@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-hydeout (4.1.0)
+    jekyll-theme-hydeout (4.2.0)
       jekyll (>= 3.6, < 5.0)
       jekyll-feed (~> 0.6)
       jekyll-gist (~> 1.4)
